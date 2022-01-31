@@ -1,0 +1,136 @@
+.form-modal__text {
+  display: block;
+  margin-bottom: 12px;
+
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.03em;
+
+  color: $secondary-title-color;
+}
+
+.form-modal__label {
+  display: block;
+  margin-bottom: 4px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  color: $secondary-text-color;
+}
+
+.form-modal__field {
+  display: block;
+  width: 100%;
+  height: 40px;
+  padding-left: 42px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  outline: none;
+
+  transition: $transition-border;
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &:focus + .form-modal__icon {
+    fill: $accent-color;
+  }
+}
+
+.form-modal__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: #000000;
+  transition: $transition-fill;
+}
+
+.form-modal__comment {
+  width: 100%;
+  height: 120px;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  box-sizing: border-box;
+  border-radius: 4px;
+
+  resize: none;
+  outline: none;
+
+  transition: $transition-border;
+
+  &:focus {
+    border: 1px solid $accent-color;
+  }
+
+  &::placeholder {
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
+  }
+}
+
+.form-modal__license {
+  @include centered-flex;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  color: $secondary-text-color;
+}
+
+.form-modal__link {
+  display: inline-block;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: $accent-color;
+}
+
+.form-modal__button {
+  display: flex;
+  @include centered-margin;
+}
+
+.field-wrap {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.custom-checkbox {
+  @include centered-flex;
+  width: 16px;
+  height: 15px;
+  margin-right: 8.38px;
+
+  border: 2px solid $secondary-title-color;
+  border-radius: 2px;
+
+  transition: $transition-background-color, $transition-border-color;
+
+  .form-modal__checkbox:checked + & {
+    border-color: transparent;
+    background-color: $accent-color;
+    background-origin: border-box;
+  }
+}
