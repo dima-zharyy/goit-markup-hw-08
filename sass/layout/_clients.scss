@@ -35,15 +35,6 @@
 .clients-list__link {
   @include centered-flex;
   flex-grow: 1;
-  @media screen and (max-width: 767px) {
-  }
-
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
-  }
-
-  @media screen and (min-width: 1200px) {
-  }
-
   height: 92px;
 
   color: #afb1b8;
