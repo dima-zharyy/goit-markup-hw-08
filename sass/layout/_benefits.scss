@@ -1,14 +1,31 @@
-// .benefits {
-//   display: flex;
-// }
+.benefits {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-wrap: wrap;
+    margin-right: -30px;
+    margin-bottom: -30px;
+  }
+}
 
-// .benefits__item {
-//   width: 270px;
+.benefits__item {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    flex-basis: calc(100% / 2 - 30px);
+    margin-right: 30px;
+    margin-bottom: 30px;
+  }
 
-//   &:not(:last-child) {
-//     margin-right: 30px;
-//   }
-// }
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+  }
+
+  &:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      margin-right: 30px;
+    }
+  }
+}
 
 .benefits__icon-container {
   @include centered-flex;
