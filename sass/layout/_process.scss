@@ -10,30 +10,30 @@
 
 .process-list {
   display: flex;
+}
 
-  &__item {
-    position: relative;
+.process-list__item {
+  position: relative;
 
-    &:not(:nth-child(3n)) {
-      margin-right: 30px;
-    }
+  &:not(:nth-child(3n)) {
+    margin-right: 30px;
   }
+}
 
-  &__title {
-    position: absolute;
-    bottom: 0;
-    height: 70px;
-    width: 100%;
+.process-list__title {
+  position: absolute;
+  bottom: 0;
+  height: 70px;
+  width: 100%;
 
-    @include centered-flex;
+  @include centered-flex;
 
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    color: $primary-white-color;
+  color: $primary-white-color;
 
-    background: rgba(47, 48, 58, 0.8);
-  }
+  background: rgba(47, 48, 58, 0.8);
 }
