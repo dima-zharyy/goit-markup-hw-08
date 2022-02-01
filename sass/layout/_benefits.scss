@@ -1,18 +1,18 @@
-.benefits {
-  display: flex;
-}
+// .benefits {
+//   display: flex;
+// }
 
-.benefits__item {
-  width: 270px;
+// .benefits__item {
+//   width: 270px;
 
-  &:not(:last-child) {
-    margin-right: 30px;
-  }
-}
+//   &:not(:last-child) {
+//     margin-right: 30px;
+//   }
+// }
 
 .benefits__icon-container {
   @include centered-flex;
-  width: 270px;
+  // width: 270px;
   height: 120px;
   border-radius: 4px;
   margin-bottom: 30px;
@@ -27,6 +27,10 @@
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .benefits__desc {
