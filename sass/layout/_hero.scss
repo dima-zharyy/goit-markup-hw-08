@@ -4,6 +4,11 @@
   max-width: 1600px;
   @include centered-margin;
 
+  @media screen and (min-width: 1200px) {
+    padding-top: 200px;
+    padding-bottom: 200px;
+  }
+
   text-align: center;
 
   background-color: $primary-background-color;
@@ -12,11 +17,6 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
-  @media screen and (min-width: 1200px) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
 }
 
 .hero__title {
