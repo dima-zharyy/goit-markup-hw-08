@@ -24,10 +24,10 @@
     <!-- Шапка сайта -->
     <header class="header">
       <div class="container header__container">
+        <a class="logo header__logo" href="./index.html" lang="en"
+          >Web<span class="logo__text">Studio</span></a
+        >
         <nav class="site-nav">
-          <a class="logo header__logo" href="./index.html" lang="en"
-            >Web<span class="logo__text">Studio</span></a
-          >
           <ul class="nav-list">
             <li class="nav-list__item">
               <a class="nav-list__link" href="./index.html">Студия</a>
@@ -43,7 +43,7 @@
         <ul class="contact">
           <li class="contact__item">
             <a class="contact__link" href="mailto:info@devstudio.com"
-              ><svg class="contact__icon" width="16" height="12">
+              ><svg class="contact__icon contact__icon--envelope">
                 <use href="images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -51,13 +51,66 @@
           </li>
           <li class="contact__item">
             <a class="contact__link" href="tel:+380961111111">
-              <svg class="contact__icon" width="10" height="16">
+              <svg class="contact__icon contact__icon--tel">
                 <use href="images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+        <button
+          type="button"
+          class="menu-open-btn js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <svg class="menu-open-btn__icon" width="40" height="40">
+            <use href="images/icons.svg#menu-burger"></use>
+          </svg>
+        </button>
+      </div>
+      <!-- Мобильное меню -->
+      <div class="mob-menu js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-close-btn js-close-menu">
+          <svg class="menu-close-btn__icon" width="40" height="40">
+            <use href="images/icons.svg#menu-cross"></use>
+          </svg>
+        </button>
+        <div class="mob-menu__container">
+          <nav class="navigation">
+            <ul class="nav-mob">
+              <li class="nav-mob__item">
+                <a class="nav-mob__link" href="./index.html">Студия</a>
+              </li>
+              <li class="nav-mob__item">
+                <a class="nav-mob__link nav-mob__link--current" href="./portfolio.html"
+                  >Портфолио</a
+                >
+              </li>
+              <li class="nav-mob__item"><a class="nav-mob__link" href="">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="navigation-wrap-contact">
+            <ul class="contact-mob">
+              <li class="contact-mob__item">
+                <a class="contact-mob__link contact-mob__link--accent" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contact-mob__item">
+                <a class="contact-mob__link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social-mob">
+              <li class="social-mob__item"><a href="" class="social-mob__link">Instagram</a></li>
+              <li class="social-mob__item"><a href="" class="social-mob__link">Twitter</a></li>
+              <li class="social-mob__item"><a href="" class="social-mob__link">Facebook</a></li>
+              <li class="social-mob__item"><a href="" class="social-mob__link">LinkedIn</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -350,5 +403,12 @@
         </form>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
