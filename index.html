@@ -69,13 +69,13 @@
       </div>
       <!-- Мобильное меню -->
       <div class="mob-menu js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-close-btn js-close-menu">
+          <svg class="menu-close-btn__icon" width="40" height="40">
+            <use href="images/icons.svg#menu-cross"></use>
+          </svg>
+        </button>
         <div class="mob-menu__container">
-          <button type="button" class="menu-close-btn js-close-menu">
-            <svg class="menu-open-btn__icon" width="40" height="40">
-              <use href="images/icons.svg#menu-cross"></use>
-            </svg>
-          </button>
-          <nav class="mob-nav">
+          <nav class="navigation">
             <ul class="nav-mob">
               <li class="nav-mob__item">
                 <a class="nav-mob__link nav-mob__link--current" href="./index.html">Студия</a>
@@ -86,20 +86,26 @@
               <li class="nav-mob__item"><a class="nav-mob__link" href="">Контакты</a></li>
             </ul>
           </nav>
-          <ul class="contact-mob">
-            <li class="contact-mob__item">
-              <a class="contact-mob__link" href="mailto:info@devstudio.com"> info@devstudio.com </a>
-            </li>
-            <li class="contact-mob__item">
-              <a class="contact-mob__link" href="tel:+380961111111"> +38 096 111 11 11 </a>
-            </li>
-          </ul>
-          <ul class="social-mob">
-            <li class="social-mob__item"><a href="" class="social-mob__link">Instagram</a></li>
-            <li class="social-mob__item"><a href="" class="social-mob__link">Twitter</a></li>
-            <li class="social-mob__item"><a href="" class="social-mob__link">Facebook</a></li>
-            <li class="social-mob__item"><a href="" class="social-mob__link">LinkedIn</a></li>
-          </ul>
+          <div class="navigation-wrap-contact">
+            <ul class="contact-mob">
+              <li class="contact-mob__item">
+                <a class="contact-mob__link contact-mob__link--accent" href="tel:+380961111111">
+                  +38 096 111 11 11
+                </a>
+              </li>
+              <li class="contact-mob__item">
+                <a class="contact-mob__link" href="mailto:info@devstudio.com">
+                  info@devstudio.com
+                </a>
+              </li>
+            </ul>
+            <ul class="social-mob">
+              <li class="social-mob__item"><a href="" class="social-mob__link">Instagram</a></li>
+              <li class="social-mob__item"><a href="" class="social-mob__link">Twitter</a></li>
+              <li class="social-mob__item"><a href="" class="social-mob__link">Facebook</a></li>
+              <li class="social-mob__item"><a href="" class="social-mob__link">LinkedIn</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
