@@ -5,15 +5,14 @@
   font-weight: bold;
   font-size: 20px;
   line-height: 1.5;
-
-  @media screen and (min-width: 1200px) {
-    line-height: 1.15;
-  }
-
   text-align: center;
   letter-spacing: 0.03em;
 
   color: $secondary-title-color;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .form-modal__label {
@@ -87,15 +86,14 @@
   &::placeholder {
     font-size: 14px;
     line-height: 1.14;
+    letter-spacing: 0.01em;
+
+    color: rgba(117, 117, 117, 0.5);
 
     @media screen and (min-width: 1200px) {
       font-size: 12px;
       line-height: 1.17;
     }
-
-    letter-spacing: 0.01em;
-
-    color: rgba(117, 117, 117, 0.5);
   }
 }
 
@@ -105,31 +103,30 @@
 
   font-size: 12px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+
+  color: $secondary-text-color;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
   }
-
-  letter-spacing: 0.03em;
-
-  color: $secondary-text-color;
 }
 
 .form-modal__link {
   display: inline-block;
+
   font-size: 12px;
   line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-decoration-line: underline;
+
+  color: $accent-color;
 
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.71;
   }
-
-  letter-spacing: 0.03em;
-  text-decoration-line: underline;
-
-  color: $accent-color;
 }
 
 .form-modal__button {

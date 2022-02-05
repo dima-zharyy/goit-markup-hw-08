@@ -68,7 +68,9 @@
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    @media screen and (min-width: 1200px) {
+      color: $accent-color;
+    }
   }
 }
 
@@ -107,7 +109,9 @@
 
   &:hover,
   &:focus {
-    background-color: $accent-color;
+    @media screen and (min-width: 1200px) {
+      background-color: $accent-color;
+    }
   }
 }
 
@@ -147,18 +151,6 @@
   height: 50px;
   padding-left: 16px;
 
-  @media screen and (min-width: 480px) {
-    width: 450px;
-  }
-
-  @media screen and (min-width: 1200px) {
-    width: 358px;
-  }
-
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
-  }
-
   font-size: 16px;
   line-height: 1.25;
   letter-spacing: 0.03em;
@@ -179,6 +171,19 @@
 
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+  
 }
 
 .subscribe__icon {

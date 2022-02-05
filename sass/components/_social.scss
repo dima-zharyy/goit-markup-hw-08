@@ -19,8 +19,10 @@
 
   &:hover,
   &:focus {
-    background-color: $accent-color;
-    color: $primary-white-color;
+    @media screen and (min-width: 1200px) {
+      background-color: $accent-color;
+      color: $primary-white-color;
+    }
   }
 }
 

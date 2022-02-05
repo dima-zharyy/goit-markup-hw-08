@@ -34,15 +34,14 @@
   font-weight: 700;
   font-size: 24px;
   line-height: 1.16;
+  letter-spacing: 0.03em;
+
+  color: $logo-color;
 
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.19;
   }
-
-  letter-spacing: 0.03em;
-
-  color: $logo-color;
 }
 
 .logo__text {
@@ -80,7 +79,9 @@
 
   &:hover,
   &:focus {
-    color: $accent-color;
+    @media screen and (min-width: 1200px) {
+      color: $accent-color;
+    }
   }
 }
 
@@ -114,12 +115,6 @@
     row-gap: 10px;
   }
 
-  // &:nth-child(1) {
-  //   @media screen and (min-width: 768px) and (max-width: 1199px) {
-  //     margin-bottom: 10px;
-  //   }
-  // }
-
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: row;
@@ -149,14 +144,16 @@
 
   transition: $transition-color;
 
+  &:hover,
+  &:focus {
+    @media screen and (min-width: 1200px) {
+      color: $accent-color;
+    }
+  }
+
   @media screen and (min-width: 1200px) {
     font-size: 14px;
     line-height: 1.14;
-  }
-
-  &:hover,
-  &:focus {
-    color: $accent-color;
   }
 }
 

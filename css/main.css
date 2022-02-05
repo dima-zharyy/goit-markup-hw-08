@@ -138,9 +138,11 @@ body.modal-open {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link:hover, .social__link:focus {
-  background-color: #2196f3;
-  color: #ffffff;
+@media screen and (min-width: 1200px) {
+  .social__link:hover, .social__link:focus {
+    background-color: #2196f3;
+    color: #ffffff;
+  }
 }
 
 .social__icon {
@@ -216,13 +218,9 @@ body.modal-open {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@media screen and (max-height: 668px) {
-  .modal {
-    position: relative;
-    top: 10px;
-    -webkit-transform: translate(-50%) scale(1);
-            transform: translate(-50%) scale(1);
-  }
+.backdrop--is-hidden .modal {
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+          transform: translate(-50%, -50%) scale(1.2);
 }
 
 @media screen and (min-width: 480px) {
@@ -237,9 +235,13 @@ body.modal-open {
   }
 }
 
-.backdrop--is-hidden .modal {
-  -webkit-transform: translate(-50%, -50%) scale(1.2);
-          transform: translate(-50%, -50%) scale(1.2);
+@media screen and (max-height: 668px) {
+  .modal {
+    position: relative;
+    top: 10px;
+    -webkit-transform: translate(-50%) scale(1);
+            transform: translate(-50%) scale(1);
+  }
 }
 
 .close-button {
@@ -580,8 +582,10 @@ body.modal-open {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list__link:hover, .nav-list__link:focus {
-  color: #2196f3;
+@media screen and (min-width: 1200px) {
+  .nav-list__link:hover, .nav-list__link:focus {
+    color: #2196f3;
+  }
 }
 
 .nav-list__link--current {
@@ -672,14 +676,16 @@ body.modal-open {
 }
 
 @media screen and (min-width: 1200px) {
+  .contact__link:hover, .contact__link:focus {
+    color: #2196f3;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .contact__link {
     font-size: 14px;
     line-height: 1.14;
   }
-}
-
-.contact__link:hover, .contact__link:focus {
-  color: #2196f3;
 }
 
 .contact__icon {
@@ -726,6 +732,7 @@ body.modal-open {
   background-color: #ffffff;
   padding: 48px 40px;
   z-index: 10;
+  overflow-y: scroll;
   -webkit-transform: translateX(100%);
           transform: translateX(100%);
   -webkit-transition: -webkit-transform 250ms ease-in-out;
@@ -771,14 +778,14 @@ body.modal-open {
   background-color: transparent;
 }
 
+.menu-close-btn:hover, .menu-close-btn:focus {
+  color: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
   .menu-close-btn {
     display: none;
   }
-}
-
-.menu-close-btn:hover, .menu-close-btn:focus {
-  color: #2196f3;
 }
 
 .menu-close-btn__icon {
@@ -794,14 +801,14 @@ body.modal-open {
   background-color: transparent;
 }
 
+.menu-open-btn:hover, .menu-open-btn:focus {
+  color: #2196f3;
+}
+
 @media screen and (min-width: 768px) {
   .menu-open-btn {
     display: none;
   }
-}
-
-.menu-open-btn:hover, .menu-open-btn:focus {
-  color: #2196f3;
 }
 
 .menu-open-btn__icon {
@@ -873,12 +880,13 @@ body.modal-open {
   padding-top: 118px;
   padding-bottom: 118px;
   max-width: 1600px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   text-align: center;
   background-color: #2f303a;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero-backgorund.jpg);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero-backgorund.jpg);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/mob-bg-1x.jpg);
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero/mob-bg-1x.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -888,6 +896,41 @@ body.modal-open {
   .hero {
     padding-top: 200px;
     padding-bottom: 200px;
+  }
+}
+
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/mob-bg-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero/mob-bg-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/tab-bg-1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero/tab-bg-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/tab-bg-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero/tab-bg-2x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/desk-bg-1x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero/desk-bg-1x.jpg);
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .hero {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(47, 48, 58, 0.4)), to(rgba(47, 48, 58, 0.4))), url(../images/hero/desk-bg-2x.jpg);
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) 100%), url(../images/hero/desk-bg-2x.jpg);
   }
 }
 
@@ -951,6 +994,12 @@ body.modal-open {
 @media screen and (min-width: 1200px) {
   .benefits__item {
     max-width: 270px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .benefits__item:not(:last-child) {
+    margin-bottom: 30px;
   }
 }
 
@@ -1478,8 +1527,10 @@ body.modal-open {
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.address-list__link:hover, .address-list__link:focus {
-  color: #2196f3;
+@media screen and (min-width: 1200px) {
+  .address-list__link:hover, .address-list__link:focus {
+    color: #2196f3;
+  }
 }
 
 .address-list__link--other-color {
@@ -1515,8 +1566,10 @@ body.modal-open {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.social__link--other-background:hover, .social__link--other-background:focus {
-  background-color: #2196f3;
+@media screen and (min-width: 1200px) {
+  .social__link--other-background:hover, .social__link--other-background:focus {
+    background-color: #2196f3;
+  }
 }
 
 .subscribe__text {
@@ -1574,24 +1627,6 @@ body.modal-open {
   outline: none;
 }
 
-@media screen and (min-width: 480px) {
-  .subscribe__field {
-    width: 450px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .subscribe__field {
-    width: 358px;
-  }
-}
-
-@media screen and (max-width: 1199px) {
-  .subscribe__field {
-    margin-bottom: 20px;
-  }
-}
-
 .subscribe__field::-webkit-input-placeholder {
   font-size: 16px;
   line-height: 1.25;
@@ -1618,6 +1653,24 @@ body.modal-open {
   line-height: 1.25;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+@media screen and (min-width: 480px) {
+  .subscribe__field {
+    width: 450px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe__field {
+    width: 358px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe__field {
+    margin-bottom: 20px;
+  }
 }
 
 .subscribe__icon {
