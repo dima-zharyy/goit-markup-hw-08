@@ -1,25 +1,13 @@
 .gallery {
-  @media screen and (min-width: 768px) {
-    margin: -15px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-}
-
-.gallery__item {
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 30px;
-    }
-  }
+  display: grid;
+  grid-gap: 30px;
 
   @media screen and (min-width: 768px) {
-    margin: 15px;
-    flex-basis: calc(100% / 2 - 30px);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: calc(100% / 3 - 30px);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
